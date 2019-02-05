@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import DetoxNowDefaultMap from './DetoxNowMap';
-import DetoxNowNav from '../DetoxNowNav/DetoxNowNav';
+import Button from '@material-ui/core/Button';
 
-// This is one of our simplest components
-// It doesn't have local state, so it can be a function component.
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is, so it doesn't need 'connect()'
 
 
 export class DetoxNowButton extends Component {
@@ -26,7 +21,7 @@ export class DetoxNowButton extends Component {
   render() {
     return (
       <div>
-        <a href ={'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng}>Detox Now</a>
+        <Button><a href ={'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng}>Detox Now</a></Button>
       </div>
     );
   }

@@ -49,7 +49,7 @@ const Nav = (props) => (
                 component={MyLink4}
                 size="large" 
                 color="secondary">
-            About
+                Register
             </Button>
       </div>
   </div>

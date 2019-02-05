@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import DetoxCenterLoginMap from './DetoxCenterLoginMap';
 import Footer from '../Footer/Footer';
 
 // material ui 
@@ -28,9 +27,6 @@ export class DetoxCenterLogin extends Component {
   render() {
     return (
       <div align="center">
-         <div>
-          <DetoxCenterLoginMap />
-         </div>
          <Card id="card">
            {this.props.reduxState.detoxInfo.map(info => (
              <div key={info.detox_id}>

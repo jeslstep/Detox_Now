@@ -2,13 +2,10 @@ import React, {Component} from 'react';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import {connect} from 'react-redux';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
-import DetoxNow from '../DetoxNow/DetoxNow';
 import AllDetoxCentersMap from '../AllDetoxCentersMap/AllDetoxCentersMap';
-import AboutPage from '../AboutPage/AboutPage';
 import UserLogin from '../UserLogin/UserLogin';
 import SMSForm from '../SMSForm/SMSForm';
 import DetoxCenterLogin from '../DetoxCenterLogin/DetoxCenterLogin';
-import DetoxCenterLoginMap from '../DetoxCenterLogin/DetoxCenterLoginMap';
 import './App.css';
 
 
@@ -29,29 +26,29 @@ class App extends Component {
       this.getGeoLocation();
     }
 
-// captures users current location and sets coords to reduxstate
-getGeoLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        console.log('in getGeoLoaction', 'lat: ', position.coords.latitude, 'lng:', position.coords.longitude)
-        this.props.dispatch({
-          type: 'SET_CURRENT_LOCATION',
-          payload: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          }
-        });
-        console.log('found current location', 'lat:', position.coords.latitude,
-          'lng:', position.coords.longitude);
-      }
-    )
-  } else {
-    console.log('Location services not supported by your browser');
-    // try again
-    this.getGeoLocation();
+  // captures users current location and sets coords to reduxstate
+  getGeoLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log('in getGeoLoaction', 'lat: ', position.coords.latitude, 'lng:', position.coords.longitude)
+          this.props.dispatch({
+            type: 'SET_CURRENT_LOCATION',
+            payload: {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+          });
+          console.log('found current location', 'lat:', position.coords.latitude,
+            'lng:', position.coords.longitude);
+        }
+      )
+    } else {
+      console.log('Location services not supported by your browser');
+      // try again
+      this.getGeoLocation();
+    }
   }
-}
   
 
   render() {
@@ -64,16 +61,6 @@ getGeoLocation = () => {
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
             <Route
-              exact
-              path= "/detoxnowdefault"
-              component={DetoxNow}
-            />
-             <Route
-              exact
-              path= "/about"
-              component={AboutPage}
-            />
-              <Route
               exact
               path= "/detoxnowmap"
               component={AllDetoxCentersMap}
@@ -96,11 +83,6 @@ getGeoLocation = () => {
               exact
               path="/smsform"
               component={SMSForm}
-            />
-             <ProtectedRoute
-              exact
-              path="/detoxmap"
-              component={DetoxCenterLoginMap}
             />
             {/* If none of the other routes matched, we will show a 404. */}
              {/* This works the same as the other protected route, except that if the user is logged in,
