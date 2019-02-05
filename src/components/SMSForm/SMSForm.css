@@ -1,0 +1,46 @@
+.sms-form {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sms-form label {
+    display: block;
+}
+
+.sms-form input {
+    font-size: 1em;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.sms-form div {
+    margin-bottom: 0.5em;
+}
+
+.sms-form button {
+    font-size: 1em;
+    width: 60%;
+}
+
+.sms-form.error {
+    outline: 2px solid #f00;
+}
+.sms-form.data.success {
+    outline: 3px solid green;
+}
+
+#editTable {
+     width: 60%;
+     margin-bottom: 25px;
+}
+
+.card4 {
+    margin: 25px;
+    margin-bottom: 25px;
+    height: auto;
+    width: 50%;
+    text-align: center;
+    background-color: floralwhite;
+    color: black;
+}
+

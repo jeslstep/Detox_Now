@@ -1,0 +1,19 @@
+
+.nav {
+  overflow: hidden;
+  background-color: black;
+  max-height: auto;
+}
+
+.nav-left {
+    float: left;
+    margin-top: 0px;
+}
+
+.dextoxnow {
+margin-top: 20px;
+text-align: center;
+}
+
+
+

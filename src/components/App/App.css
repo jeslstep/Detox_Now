@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    background-color: floralwhite;
+}
+
+.alert {
+    background-color: #ff4545;
+    margin: 50px;
+}
+
+.form2 {
+    text-align: center;
+}
+
+
+.form {
+    background-color: floralwhite;
+    color: black;
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+
+body {
+    font: normal medium/1.4 sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.25rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+tbody tr:nth-child(odd) {
+    background: #eee;
+}
+
+input {
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.log-in, .log-out, .register {
+  background-color: navy;
+  border-radius: 4px;
+  color: #f8f8f8;
+  min-height: 50px;
+  min-width: 100px;
+  outline:0;
+  cursor: pointer;
+}
+
+.log-in:hover, .log-out:hover, .register:hover {
+  background-color: #008183;
+}
+
+/* This line makes the "Register" and "Login" buttons look like links */
+.link-button {
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0;
+    font: inherit;
+    outline:0;
+    border-bottom:1px solid #444; 
+    cursor: pointer;
+}
+
+.table {
+    margin: 20px;
+    width: 60%;
+    height: auto;
+
+}
+
+/* register user */
+
+#addContact{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* detox center  */
+
+#card {
+    margin: 25px;
+    height: auto;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.detoxCenterBtn{
+    text-align: center;
+    display: inline-block;
+}
+
+/* AboutPage  */
+h1 {
+    text-align: center;
+}
+
+.card4 {
+    margin: 25px;
+    margin-bottom: 25px;
+    height: auto;
+    width: 60%;
+    text-align: center;
+    background-color: floralwhite;
+    color: black;
+    padding: 20px;
+}
+
+p {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding-bottom: 0px;
+}
+
+.infoWindow {
+     height: 200px;
+     width: auto; 
+}
+
+
+
+
