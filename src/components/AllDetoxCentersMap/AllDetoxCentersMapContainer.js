@@ -41,9 +41,6 @@ class AllDetoxCentersMapContainer extends Component {
 render (){
     return (
         <div>
-            <div align="center">
-                <p>Select a marker and click Get Directions</p>
-            </div>
             <header> 
             <div align="center">
                 <h2>{this.state.detox_center_name}</h2>

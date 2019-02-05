@@ -21,7 +21,18 @@ export class DetoxNowButton extends Component {
   render() {
     return (
       <div>
-        <Button><a href ={'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng}>Detox Now</a></Button>
+        <center>
+        <Button
+          size="large" 
+          variant="contained" 
+          color="primary" 
+          href = {
+            'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng
+          }
+        >
+        Detox Now
+          </Button>
+        </center>
       </div>
     );
   }
