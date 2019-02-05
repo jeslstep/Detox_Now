@@ -4,6 +4,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import { TextField } from '@material-ui/core';
 
 class RegisterPage extends Component {
+
+  // stores input values 
   state = {
     username: '',
     password: '',
@@ -14,9 +16,9 @@ class RegisterPage extends Component {
     state: '',
     zip: 0,
     total_bed_count: 0
-
   };
 
+  // resgisters a detox center
   registerUser = (event) => {
     event.preventDefault();
 
@@ -39,9 +41,9 @@ class RegisterPage extends Component {
     }  else {
       this.props.dispatch({type: 'REGISTRATION_INPUT_ERROR'});
     }
-  } // end registerUser
+  } 
 
-  
+  // sets input values into state
   handleInputChangeFor = propertyName => (event) => {
     this.setState({
       [propertyName]: event.target.value,

@@ -123,23 +123,6 @@ class LoginPage extends Component {
             />
           </div>
         </form>
-        <center>
-          <Button
-            type="button"
-            className="link-button"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
-          >
-            Register as a User
-          </Button>
-          <br/>
-           <Button
-            type="button"
-            className="link-button"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_DETOX_MODE'})}}
-          >
-            Register as a Detox Center 
-          </Button>
-        </center>
       </div>
       </div>
     );
