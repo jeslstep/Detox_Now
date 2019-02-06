@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import AllDetoxCentersMap from '../AllDetoxCentersMap/AllDetoxCentersMap';
 
 
 
-export class LandingPage extends Component {
+
+export class Logo extends Component {
 
  
 
 
   render() {
     return (
-        <div>
-            <center className="logo">
+        <div className= "opacity" >
+        <center className="logo">
             <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-            alt="Detox Now" height="auto" width="350"/>
-            </center>
-            <AllDetoxCentersMap/> 
+            alt="Detox Now" height="auto" width="370"/>
+        </center>
         </div>
-  
     );
   }
 }
@@ -26,4 +24,4 @@ export class LandingPage extends Component {
 const mapReduxStateToProps = (reduxState) => ({
     reduxState
 }); 
-export default connect(mapReduxStateToProps)(LandingPage);
+export default connect(mapReduxStateToProps)(Logo);

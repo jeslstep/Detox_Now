@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Button from '@material-ui/core/Button';
 
+const style = {
+  color: '#ffffff',
+  backgroundColor: '#000000',
+};
 
 
 export class DetoxNowButton extends Component {
@@ -20,17 +24,18 @@ export class DetoxNowButton extends Component {
 
   render() {
     return (
-      <div>
+      <div className="buttonMargins">
         <center>
         <Button
+          className="Button"
           size="large" 
           variant="contained" 
-          color="primary" 
+          style={style}
           href = {
             'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng
           }
         >
-        Detox Now
+          Get a Bed
           </Button>
         </center>
       </div>

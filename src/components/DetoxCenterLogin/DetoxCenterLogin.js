@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import Footer from '../Footer/Footer';
 
 // material ui 
 import { CardActions } from '@material-ui/core';
@@ -77,7 +76,6 @@ export class DetoxCenterLogin extends Component {
                 </CardActions>
                    </div>
              </Card>
-             <Footer/>
       </div>
     );
   }

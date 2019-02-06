@@ -1,7 +1,6 @@
 
 import React, {Component} from "react";
 import {connect} from 'react-redux';
-import '../Footer/Footer';
 
 // google maps api 
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
@@ -41,11 +40,6 @@ class AllDetoxCentersMapContainer extends Component {
 render (){
     return (
         <div>
-            <header> 
-            <div align="center">
-                <h2>{this.state.detox_center_name}</h2>
-            </div>
-            </header>
         <GoogleMap
             defaultZoom={10}
             center = {{lat: 44.975918, lng: -93.273079 }}>
@@ -79,9 +73,8 @@ render (){
         
             <InfoWindow>
                 <Card  className="infoWindow" key={marker.detox_id}>
+                    <center>
                     <h3>{marker.detox_center_name}</h3>
-                    { /* input makes it easy for a user to copy the address */ }
-                    <input defaultValue={marker.address}/>
                     <h4>Beds Available:</h4>
                     <h3>{Number(marker.total_bed_count) - Number(marker.current_bed_count)}</h3>
                     <div>
@@ -89,12 +82,14 @@ render (){
                         size="small" 
                         variant="contained" 
                         color="primary"
-                        onClick={() =>  this.displayDirections()
+                        href = {
+                            'http://www.google.com/maps/place/' + marker.lat + ',' + marker.lng
                         }
                         >
                     Open in Google Maps
                     </Button> 
                     </div>
+                    </center>
                 </Card>
             </InfoWindow> }
             </Marker>

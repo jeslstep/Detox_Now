@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
-import LoginPageNav from '../LoginPageNav/LoginPageNav'
+
 
 class LoginPage extends Component {
   state = {
@@ -54,6 +54,7 @@ class LoginPage extends Component {
     event.preventDefault();
 
     if (this.state.username && this.state.password) {
+
       this.props.dispatch({
         type: 'LOGIN',
         payload: {
@@ -64,7 +65,7 @@ class LoginPage extends Component {
     } else {
       this.props.dispatch({ type: 'LOGIN_INPUT_ERROR' });
     }
-  } // end login
+  } 
 
   handleInputChangeFor = propertyName => (event) => {
     this.setState({
@@ -75,9 +76,6 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-      <div>
-        <LoginPageNav />
-      </div>
       <div>
         {this.props.errors.loginMessage && (
           <h2

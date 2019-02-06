@@ -2,19 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
-
 const style = {
-  color: '#ffffff',
-  backgroundColor: '#000000',
+    color: '#ffffff',
+    backgroundColor: '#000000',
 };
 
-
-// link to login page
-const MyLink = props => < Link to = "/login" { ...props
+// link to Registration page
+const MyLink = props => < Link to = "/registration" { ...props
 }
 />
 
-const LoginButton = (props) => (
+const RegisterButton = (props) => (
   <div className="buttonMargins">
     <center>
       <Button 
@@ -23,10 +21,10 @@ const LoginButton = (props) => (
         variant="contained" 
         style={style} 
         component={MyLink}>
-      Login
+      Register
       </Button>
    </center>
   </div>
 );
 
-export default LoginButton;
+export default RegisterButton;

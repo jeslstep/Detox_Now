@@ -2,6 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
     background-color: floralwhite;
+    
 }
 
 .alert {
@@ -106,31 +107,43 @@ input {
     display: inline-block;
 }
 
-/* AboutPage  */
-h1 {
-    text-align: center;
-}
-
-.card4 {
-    margin: 25px;
-    margin-bottom: 25px;
-    height: auto;
-    width: 60%;
-    text-align: center;
-    background-color: floralwhite;
-    color: black;
-    padding: 20px;
-}
-
-p {
-    margin-bottom: 0px;
-    margin-top: 5px;
-    padding-bottom: 0px;
-}
-
 .infoWindow {
-     height: 200px;
+     height: 150px;
      width: auto; 
+}
+
+.Button {
+    width: 80%;
+    
+}
+
+.buttonMargins {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 45px;
+    
+}
+
+.logo {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 15px;
+    z-index: 100;
+    position: absolute;
+}
+
+#map {
+     z-index: 0;
+}
+
+#move {
+    height: 640px;
+}
+
+.border {
+      border-style: solid;
+      border-width: 4px;
+      border-color: #AE2F2C;
 }
 
 
