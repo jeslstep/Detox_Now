@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import GOOGLE_MAPS_API_KEY from '../api_key';
 import LoginButton from '../LoginButton/LoginButton';
 import DetoxNowButton from '../DetoxNowButton/DetoxNowButton';
-// import RegisterButton from '../RegisterButton/RegisterButton';
+import RegisterButton from '../RegisterButton/RegisterButton';
 import { Logo } from '../Logo/Logo';
 import Button from '@material-ui/core/Button';
 
@@ -48,7 +48,7 @@ render() {
             <div id="move"></div>
             <DetoxNowButton />
             <LoginButton/>
-                <center className="buttonMargins">
+                {/* <center className="buttonMargins">
                 <Button
                     type="button"
                     className="link-button "
@@ -64,8 +64,8 @@ render() {
                 >
                     <strong>Register as a Detox Center </strong>
                 </Button>
-                </center>
-            {/* <RegisterButton/> */}
+                </center> */}
+            <RegisterButton/>
             </div>
     );
   }

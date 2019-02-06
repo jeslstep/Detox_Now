@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
+import BackButton from '../BackButton/BackButton';
 
 
 class LoginPage extends Component {
@@ -128,6 +129,7 @@ class LoginPage extends Component {
           </div>
         </form>
       </div>
+      <BackButton/>
       </div>
     );
   }

@@ -44,7 +44,7 @@ const ProtectedRoute = (props) => {
     // show the component that is protected
     ComponentToShow = ComponentToProtect2;
   }
-    else if (loginMode == '') {
+    else if (loginMode === '') {
       // if they are not logged in, check the loginMode on Redux State
       // if the mode is 'login', show the LoginPage
       ComponentToShow = AllDetoxCentersMap;

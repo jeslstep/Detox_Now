@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import BackButton from '../BackButton/BackButton';
+// link to login page
+const MyLink = props => < Link to = "/registeruser" {
+  ...props
+}
+/>
 
+// link to login page
+const MyLink2 = props => < Link to = "/registerdetox" {
+  ...props
+}
+/>
 
 class Registration extends Component {
 
@@ -13,6 +25,7 @@ class Registration extends Component {
           <Button
             type="button"
             className="link-button"
+            component={MyLink}
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
           >
             Register as a User
@@ -21,11 +34,13 @@ class Registration extends Component {
            <Button
             type="button"
             className="link-button"
+             component={MyLink2}
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_DETOX_MODE'})}}
           >
             Register as a Detox Center 
           </Button>
         </center>
+        <BackButton/>
       </div>
     );
   }

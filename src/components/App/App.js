@@ -8,6 +8,9 @@ import SMSForm from '../SMSForm/SMSForm';
 import DetoxCenterLogin from '../DetoxCenterLogin/DetoxCenterLogin';
 import './App.css';
 import LoginPage from '../LoginPage/LoginPage';
+import Registration from '../Registration/Registration';
+import RegisterUserPage from '../Registration/RegisterUserPage';
+import RegisterDetoxPage from '../Registration/RegisterDetoxPage';
 
 
 
@@ -64,13 +67,28 @@ class App extends Component {
             This is a route anyone can see, no login necessary */}
             <Route
               exact
-              path= "/"
+              path= "/alldetoxcentersmap"
               component={AllDetoxCentersMap}
             />
              <Route
               exact
               path= "/login"
               component={LoginPage}
+            />
+              <Route
+              exact
+              path= "/registration"
+              component={Registration}
+            />
+                 <Route
+              exact
+              path= "/registeruser"
+              component={RegisterUserPage}
+            />
+                  <Route
+              exact
+              path= "/registerdetox"
+              component={RegisterDetoxPage}
             />
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/home will show the UserPage if the user is logged in.

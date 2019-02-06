@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import InputLabel from '@material-ui/core/InputLabel';
 import { TextField } from '@material-ui/core';
+import BackButton from '../BackButton/BackButton';
 
 class RegisterPage extends Component {
 
@@ -165,15 +166,7 @@ class RegisterPage extends Component {
             />
           </div>
         </form>
-        <center>
-          <button
-            type="button"
-            className="link-button"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_LOGIN_MODE'})}}
-          >
-            Login
-          </button>
-        </center>
+        <BackButton/>
       </div>
     );
   }
@@ -184,6 +177,7 @@ class RegisterPage extends Component {
 // const mapStateToProps = ({errors}) => ({ errors });
 const mapStateToProps = state => ({
   errors: state.errors,
+  user: state.user
 });
 
 export default connect(mapStateToProps)(RegisterPage);
