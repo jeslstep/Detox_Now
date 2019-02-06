@@ -17,6 +17,13 @@ class LoginPage extends Component {
       this.getDetoxWithMostBedsAvailable();
     }
 
+  componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.user !== prevProps.user) {
+    this.props.history.push('/home');
+  }
+}
+
 
   // getDetoxWithMostBedsAvailable dispatches a call to find the detox with the most beds available
   getDetoxWithMostBedsAvailable = (event) => {
@@ -131,6 +138,7 @@ class LoginPage extends Component {
 // const mapStateToProps = ({errors}) => ({ errors });
 const mapStateToProps = state => ({
   errors: state.errors,
+  user: state.user
 });
 
 export default connect(mapStateToProps)(LoginPage);

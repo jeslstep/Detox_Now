@@ -44,10 +44,15 @@ const ProtectedRoute = (props) => {
     // show the component that is protected
     ComponentToShow = ComponentToProtect2;
   }
+    else if (loginMode == '') {
+      // if they are not logged in, check the loginMode on Redux State
+      // if the mode is 'login', show the LoginPage
+      ComponentToShow = AllDetoxCentersMap;
+    }
   else if (loginMode === 'login') {
     // if they are not logged in, check the loginMode on Redux State
     // if the mode is 'login', show the LoginPage
-     ComponentToShow = AllDetoxCentersMap;
+     ComponentToShow = LoginPage;
   } else if (loginMode === 'register'){
     // the the user is not logged in and the mode is not 'login'
     // show the RegisterPage
@@ -56,7 +61,7 @@ const ProtectedRoute = (props) => {
   } else if (loginMode === 'detoxregister') {
     ComponentToShow = RegisterDetoxPage;
   } else {
-    ComponentToShow = AllDetoxCentersMap;
+    ComponentToShow = LoginPage;
   }
 
   // We return a Route component that gets added to our list of routes

@@ -6,6 +6,7 @@ import { CardActions } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import UserLoginNav from '../UserLoginNav/UserLoginNav';
 
 export class DetoxCenterLogin extends Component {
 
@@ -26,6 +27,7 @@ export class DetoxCenterLogin extends Component {
   render() {
     return (
       <div align="center">
+        <UserLoginNav/>
          <Card id="card">
            {this.props.reduxState.detoxInfo.map(info => (
              <div key={info.detox_id}>
