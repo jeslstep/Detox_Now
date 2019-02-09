@@ -40,12 +40,17 @@ export class LandingPage extends Component {
   render() {
     return (
         <div>
-        <section className="App-header">
-          <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-            className="detoxlogo" height="auto" width="250" alt="city outline" />
-          <img src={dtnow_skline_mobile} className="App_dtnow_mobile" alt="city outline" />
+            <section className="App-header">
+            <div className="App-header">
+            <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
+            className="detoxlogo" height="auto" width="250" alt="logo" />
+            </div>
+            <div>
+                <img src={dtnow_skline_mobile} alt="city outline"/>
+            </div>
         </section>
-        <section>
+        <section className="grayBackground">
+        <section >
         
             <center>
                  <div  className="mission" >
@@ -56,7 +61,7 @@ export class LandingPage extends Component {
                  </div>
             </center>
         </section>
-        <section>
+        <section >
             <center>
             <div className="container">
                 <Button 
@@ -73,21 +78,24 @@ export class LandingPage extends Component {
                 </Button>
             </div>
             </center>
+                <div>
                 <Button 
                     size="large"
                     fullWidth={true}
                     style={style.root1}
                     component={MyLink}> 
-                Continue
+                Continue As Guest
                 </Button>
-           
+            </div>
+            <div>
                 <Button 
                     size="large"
                     fullWidth={true}
                     style={style.root2}>
-                Provider 
+                Provider Login 
                 </Button>
-               
+               </div>
+        </section>
         </section>
         </div>
   
