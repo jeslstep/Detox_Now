@@ -24,17 +24,27 @@ p {
 
 .container {
     height: auto;
-    width: 250px;
+    width: 315px;
 }
 
 .loginRegister {
     padding: 10px;
     display: inline-block;
+    width: 100%;
 }
+
+.alignLeft {
+    float:left;
+}
+
+.alignRight {
+    float: right;
+}
+
 
 .guestProvider {
     padding: 10px;
-    width: 65%;
+    width: 100%;
 }
 
 .mission {

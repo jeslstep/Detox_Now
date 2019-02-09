@@ -4,6 +4,7 @@ import dtnow_skline_mobile from './dtnow_skline_mobile.svg';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
+
 // link to login page
 const MyLink = props => < Link to = "/alldetoxcentersmap" {
     ...props
@@ -13,15 +14,21 @@ const MyLink = props => < Link to = "/alldetoxcentersmap" {
 const style = {
     root: {
         color: '#ffffff',
-        backgroundColor: '#18233a'
+        backgroundColor: '#18233a',
+        width: 140,
+        margin: 8, 
     },
     root1: {
         color: '#ffffff',
-        backgroundColor: '#bd2726'
+        backgroundColor: '#bd2726',
+        margin: 8,
+        width: 300,
     },
      root2: {
         color: '#ffffff',
-        backgroundColor: '#25272d'
+        backgroundColor: '#25272d',
+        margin: 8,
+        width: 300,
     }
 };
 
@@ -51,44 +58,37 @@ export class LandingPage extends Component {
         </section>
         <section>
             <center>
-                <div  className="mission" >
-                <div  className="loginRegister">
+            <div className="container">
                 <Button 
-                    size="large" 
-                    variant="contained" 
+                    className="alignLeft"
+                    size="large"
                     style={style.root}>
                 Login
                 </Button>
-                </div>
-                 <div  className="loginRegister">
                 <Button 
-                    size="large" 
-                    variant="contained" 
+                    className="alignRight"
+                    size="large"
                     style={style.root}>
                 Register
                 </Button>
-                </div>
-                <div className="guestProvider">
+            </div>
+            </center>
                 <Button 
-                    size="large" 
-                    variant="contained" 
+                    size="large"
+                    fullWidth={true}
                     style={style.root1}
                     component={MyLink}> 
                 Continue
                 </Button>
-                </div>
-                <div className="guestProvider">
+           
                 <Button 
-                    size="large" 
-                    variant="contained" 
+                    size="large"
+                    fullWidth={true}
                     style={style.root2}>
                 Provider 
                 </Button>
-                </div>
-                </div>
-            </center>
+               
         </section>
-           
         </div>
   
     );
