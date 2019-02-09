@@ -8,7 +8,7 @@ body {
 /* LandingPage */
 .App-header {
   background-color: white;
-  padding-top: 90px;
+  padding-top: 30px;
   max-height: 235px;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 p {
-    margin-top: 50px;
+    margin-top: 30px;
     color: white;
     font-family: 'Roboto',
     sans-serif;
@@ -37,7 +37,7 @@ p {
 .mission {
     padding: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 /*  End LandingPage */
 
