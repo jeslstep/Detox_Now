@@ -11,7 +11,7 @@ body {
   margin-top: 30px;
   margin-bottom: -7px;
   margin-left: -7px;
-  margin-right: -25px;
+  margin-right: -7px;
 }
 
 .grayBackground{
@@ -26,7 +26,6 @@ section {
 }
 
 .detoxlogo {
-    margin-right: 25px;
     padding-bottom: 30px;
 }
 

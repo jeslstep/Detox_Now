@@ -54,6 +54,7 @@ export class LandingPage extends Component {
     return (
         <div>
             <section className="App-header">
+            <center>
                 <div>
                     {/* detox now logo accessed via firebase url */}
                     <img 
@@ -63,6 +64,7 @@ export class LandingPage extends Component {
                         width="300" 
                         alt="logo" />
                 </div>
+                </center>
                 <div>
                     {/* city skylinee outline image in current directory */}
                     <img 
