@@ -35,7 +35,7 @@ export class LandingPage extends Component {
         <div>
         <section className="App-header">
           <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-            className="detoxlogo" alt="city outline" />
+            className="detoxlogo" height="auto" width="275" alt="city outline" />
           <img src={dtnow_skline_mobile} className="App_dtnow_mobile" alt="city outline" />
         </section>
         <section className="mission">
