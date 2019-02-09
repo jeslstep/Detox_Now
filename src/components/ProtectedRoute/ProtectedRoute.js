@@ -5,6 +5,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterUserPage from '../Registration/RegisterUserPage';
 import RegisterDetoxPage from '../Registration/RegisterDetoxPage';
 import AllDetoxCentersMap from '../AllDetoxCentersMap/AllDetoxCentersMap';
+import { LandingPage } from '../LandingPage/LandingPage';
 
 // A Custom Wrapper Component -- This will keep our code DRY.
 // Responsible for watching redux state, and returning an appropriate component
@@ -47,7 +48,7 @@ const ProtectedRoute = (props) => {
     else if (loginMode === '') {
       // if they are not logged in, check the loginMode on Redux State
       // if the mode is 'login', show the LoginPage
-      ComponentToShow = AllDetoxCentersMap;
+      ComponentToShow = LandingPage;
     }
   else if (loginMode === 'login') {
     // if they are not logged in, check the loginMode on Redux State

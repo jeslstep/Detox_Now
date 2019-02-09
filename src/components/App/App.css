@@ -1,9 +1,46 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
-    background-color: floralwhite;
-    
+    background-color: #464f61;
+    text-align: center;
 }
+
+/* LandingPage */
+.App-header {
+  background-color: white;
+  padding-top: 90px;
+  max-height: 235px;
+}
+
+.detoxlogo {
+    padding-bottom: 30px;
+}
+
+p {
+    margin-top: 50px;
+    color: white;
+    font-family: 'Roboto',
+    sans-serif;
+    width: 60%;
+}
+
+.loginRegister {
+    padding: 10px;
+    display: inline-block;
+}
+
+.guestProvider {
+    padding: 10px;
+    width: 65%;
+}
+
+.mission {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*  End LandingPage */
+
 
 .alert {
     background-color: #ff4545;
@@ -144,7 +181,9 @@ input {
       border-style: solid;
       border-width: 4px;
       border-color: #AE2F2C;
-}
+} 
+
+
 
 
 
