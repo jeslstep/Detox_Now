@@ -10,7 +10,7 @@ const style = {
 
 
 // link to login page
-const MyLink = props => < Link to = "/alldetoxcentersmap" { ...props
+const MyLink = props => < Link to = "/landingpage" { ...props
 }
 />
 

@@ -5,8 +5,21 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 
-// link to login page
+
+// link to all detox center map and detox now button
 const MyLink = props => < Link to = "/alldetoxcentersmap" {
+    ...props
+}
+/>
+
+// link to registration for the user and the provider
+const MyLink1 = props => < Link to = "/registration" {
+    ...props
+}
+/>
+
+// link to for the user and the provider login page
+const MyLink2 = props => < Link to = "/login" {
     ...props
 }
 />
@@ -77,13 +90,15 @@ export class LandingPage extends Component {
                 <Button 
                     className="alignLeft"
                     size="large"
-                    style={style.root}>
+                    style={style.root}
+                    component={MyLink2}>
                 Login
                 </Button>
                 <Button 
                     className="alignRight"
                     size="large"
-                    style={style.root}>
+                    style={style.root}
+                    component={MyLink1}>
                 Register
                 </Button>
             </div>
@@ -101,7 +116,8 @@ export class LandingPage extends Component {
                 <Button 
                     size="large"
                     fullWidth={true}
-                    style={style.root2}>
+                    style={style.root2}
+                    component={MyLink2}>
                 Provider Login 
                 </Button>
                </div>

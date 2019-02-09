@@ -11,6 +11,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import Registration from '../Registration/Registration';
 import RegisterUserPage from '../Registration/RegisterUserPage';
 import RegisterDetoxPage from '../Registration/RegisterDetoxPage';
+import { LandingPage } from '../LandingPage/LandingPage';
 
 
 
@@ -65,6 +66,11 @@ class App extends Component {
             <Redirect exact from="/" to="/home" />
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
+              <Route
+              exact
+              path= "/landingpage"
+              component={LandingPage}
+            />
             <Route
               exact
               path= "/alldetoxcentersmap"

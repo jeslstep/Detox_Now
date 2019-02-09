@@ -65,11 +65,17 @@ p {
 }
 
 .mission {
-    margin-top: 15px;
-    width: 80%;
+    width: 100%;
 }
 /*  End LandingPage */
 
+footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 50px;
+}
 
 .alert {
     background-color: #ff4545;

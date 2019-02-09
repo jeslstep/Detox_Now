@@ -5,7 +5,6 @@ import GOOGLE_MAPS_API_KEY from '../api_key';
 import LoginButton from '../LoginButton/LoginButton';
 import DetoxNowButton from '../DetoxNowButton/DetoxNowButton';
 import RegisterButton from '../RegisterButton/RegisterButton';
-import { Logo } from '../Logo/Logo';
 import Button from '@material-ui/core/Button';
 
 
@@ -15,9 +14,6 @@ class AllDetoxCentersMap extends Component {
 render() {
 		return ( 
             <div>
-                <div className="opacity">
-                <Logo/>
-                </div>
                 <AllDetoxCentersMapContainer
                     className = "mapBorder" 
                     
@@ -45,27 +41,9 @@ render() {
                     }
                     
 			/>
-            <div id="move"></div>
+            <footer>
             <DetoxNowButton />
-            <LoginButton/>
-                {/* <center className="buttonMargins">
-                <Button
-                    type="button"
-                    className="link-button "
-                    onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
-                >
-                   <strong> Register as a User</strong>
-                </Button>
-                <br/>
-                <Button
-                    type="button"
-                    className="link-button"
-                    onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_DETOX_MODE'})}}
-                >
-                    <strong>Register as a Detox Center </strong>
-                </Button>
-                </center> */}
-            <RegisterButton/>
+            </footer>
             </div>
     );
   }
