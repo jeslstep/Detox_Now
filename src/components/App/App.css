@@ -9,7 +9,7 @@ body {
 .App-header {
   background-color: white;
   padding-top: 30px;
-  max-height: 235px;
+  max-height: 220px;
 }
 
 .detoxlogo {
@@ -35,8 +35,8 @@ p {
 }
 
 .mission {
-    padding: 20px;
-    margin-top: 20px;
+    padding: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 /*  End LandingPage */
