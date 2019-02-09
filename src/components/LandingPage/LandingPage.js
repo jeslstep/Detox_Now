@@ -35,19 +35,23 @@ export class LandingPage extends Component {
         <div>
         <section className="App-header">
           <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-            className="detoxlogo" height="auto" width="275" alt="city outline" />
+            className="detoxlogo" height="auto" width="250" alt="city outline" />
           <img src={dtnow_skline_mobile} className="App_dtnow_mobile" alt="city outline" />
         </section>
-        <section className="mission">
+        <section>
+        
             <center>
-            <p>
-                It is difficult to find available beds at detox centers and the location of person calling or messaging
-                for help getting to a detox center.DetoxNow helps ameliorate these problems.
-            </p>
+                 <div  className="mission" >
+                <p>
+                    It is difficult to find available beds at detox centers and the location of person calling or messaging
+                    for help getting to a detox center.DetoxNow helps ameliorate these problems.
+                </p>
+                 </div>
             </center>
         </section>
         <section>
             <center>
+                <div  className="mission" >
                 <div  className="loginRegister">
                 <Button 
                     size="large" 
@@ -70,7 +74,7 @@ export class LandingPage extends Component {
                     variant="contained" 
                     style={style.root1}
                     component={MyLink}> 
-                Continue as Guest
+                Continue
                 </Button>
                 </div>
                 <div className="guestProvider">
@@ -78,8 +82,9 @@ export class LandingPage extends Component {
                     size="large" 
                     variant="contained" 
                     style={style.root2}>
-                Provider Login
+                Provider 
                 </Button>
+                </div>
                 </div>
             </center>
         </section>
