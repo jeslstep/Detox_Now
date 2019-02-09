@@ -14,19 +14,19 @@ const MyLink = props => < Link to = "/alldetoxcentersmap" {
 const style = {
     root: {
         color: '#ffffff',
-        backgroundColor: '#18233a',
+        backgroundColor: '#16233c',
         width: 140,
         margin: 8, 
     },
     root1: {
         color: '#ffffff',
-        backgroundColor: '#bd2726',
+        backgroundColor: '#ce0019',
         margin: 8,
         width: 300,
     },
      root2: {
-        color: '#ffffff',
-        backgroundColor: '#25272d',
+        color: '#aab1c0',
+        backgroundColor: '#373d4b',
         margin: 8,
         width: 300,
     }
@@ -41,23 +41,33 @@ export class LandingPage extends Component {
     return (
         <div>
             <section className="App-header">
-            <div className="App-header">
-            <img src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-            className="detoxlogo" height="auto" width="250" alt="logo" />
-            </div>
-            <div>
-                <img src={dtnow_skline_mobile} alt="city outline"/>
-            </div>
+                <div>
+                    {/* detox now logo accessed via firebase url */}
+                    <img 
+                        src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
+                        className="detoxlogo" 
+                        height="auto" 
+                        width="250" 
+                        alt="logo" />
+                </div>
+                <div>
+                    {/* city skylinee outline image in current directory */}
+                    <img 
+                    src={dtnow_skline_mobile} 
+                    alt="city outline"/>
+                </div>
         </section>
         <section className="grayBackground">
         <section >
         
             <center>
+                <div className="container">
                  <div  className="mission" >
                 <p>
                     It is difficult to find available beds at detox centers and the location of person calling or messaging
                     for help getting to a detox center.DetoxNow helps ameliorate these problems.
                 </p>
+                 </div>
                  </div>
             </center>
         </section>

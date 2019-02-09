@@ -15,7 +15,7 @@ body {
 }
 
 .grayBackground{
-    background-color: #464f61;
+    background-color: #444f63;
     display: inline-block;
     width: 100%;
     padding-bottom: 50px;
@@ -66,7 +66,7 @@ p {
 
 .mission {
     margin-top: 15px;
-    width: 60%;
+    width: 80%;
 }
 /*  End LandingPage */
 
