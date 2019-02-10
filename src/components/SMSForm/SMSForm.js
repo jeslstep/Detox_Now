@@ -53,9 +53,7 @@ class SMSForm extends Component {
                                     // sets message body into set
                                     this.setState({
                                          message: {
-                                             body: `
-                                             From:${this.props.user.username}
-                                             Reach me at: ${this.props.user.number}
+                                             body: `From: ${this.props.user.username}, ${this.props.user.number}
                                              I need help getting to a detox center, can you come get me here: ${address}`
                                          }
                                      });
