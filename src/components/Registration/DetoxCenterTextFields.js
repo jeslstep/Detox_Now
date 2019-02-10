@@ -41,7 +41,7 @@ render() {
                     <InputLabel htmlFor="username"></InputLabel>
                     <TextField
                         id="standard-name"
-                        label="Name"
+                        label="Username"
                         variant="outlined"
                         className={classes.textField}
                         value = {

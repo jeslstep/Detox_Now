@@ -42,7 +42,7 @@ render() {
                     
 			/>
             <footer>
-            <DetoxNowButton />
+                <DetoxNowButton />
             </footer>
             </div>
     );
