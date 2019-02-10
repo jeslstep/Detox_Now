@@ -51,7 +51,7 @@ class LoginTextFields extends React.Component {
         <TextField
         id="standard-name"
         style={textArea}
-        label="Name"
+        label="Username"
         variant="outlined"
         className={classes.textField}
           value = {

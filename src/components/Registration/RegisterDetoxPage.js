@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import InputLabel from '@material-ui/core/InputLabel';
-import { TextField } from '@material-ui/core';
-import BackButton from '../BackButton/BackButton';
+import DetoxCenterTextFields from './DetoxCenterTextFields';
+import { Button } from '@material-ui/core';
+import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
+
+
+// material ui style override 
+const style = {
+  root: {
+    color: '#ffffff',
+    backgroundColor: '#16233c',
+    margin: 8,
+    width: 300,
+  },
+};
+
 
 class RegisterPage extends Component {
 
@@ -54,6 +66,26 @@ class RegisterPage extends Component {
   render() {
     return (
       <div>
+           <section className="App-header">
+          <center>
+              <div>
+                  {/* detox now logo accessed via firebase url */}
+                  <img 
+                      src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
+                      className="detoxlogo" 
+                      height="auto" 
+                      width="300" 
+                      alt="logo" />
+              </div>
+            </center>
+              <div>
+                {/* city skylinee outline image in current directory */}
+                <img 
+                  src={dtnow_skline_mobile} 
+                  alt="city outline"/>
+              </div>
+        </section>
+        <section className="grayBackground">
         {this.props.errors.registrationMessage && (
           <h2
             className="alert"
@@ -62,111 +94,22 @@ class RegisterPage extends Component {
             {this.props.errors.registrationMessage}
           </h2>
         )}
-        < form className = "form" onSubmit={this.registerUser}>
-          <h1>Register as a Detox Center</h1>
-            <div>
-          </div>
-          <div>
-            <InputLabel htmlFor="username"></InputLabel>
-              <TextField
-                id="username-input"
-                label = "Username"
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
-              />
-          </div>
-          <div>
-            < InputLabel htmlFor = "password"></InputLabel> 
-              <TextField
-                id="password-input"
-                label = "Password"
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
-              />
-          </div>
-            <div>
-            <InputLabel htmlFor="detox_center_name"></InputLabel>
-              <TextField
-                id = "detox_center_name-input"
-                label = "Detox Center Name"
-                type="text"
-                name="detox_center_name"
-                value={this.state.detox_center_name}
-                onChange={this.handleInputChangeFor('detox_center_name')}
-              />
-          </div>
-           <div>
-            <InputLabel htmlFor="address"></InputLabel>
-              <TextField
-                id="address-input"
-                label = "Address"
-                type="address"
-                name="address"
-                value={this.state.address}
-                onChange={this.handleInputChangeFor('address')}
-              />
-          </div>
-          <div>
-            <small>ex. 107 chesnut st NE</small>
-          </div>
-            <div>
-            <InputLabel htmlFor="city"></InputLabel>
-              <TextField
-                id="city-input"
-                label = "City"
-                type="city"
-                name="city"
-                value={this.state.city}
-                onChange={this.handleInputChangeFor('city')}
-              />
-          </div>
-            <div>
-            <InputLabel htmlFor="state"></InputLabel>
-              <TextField
-                id="state-input"
-                label = "State"
-                type="state"
-                name="state"
-                value={this.state.state}
-                onChange={this.handleInputChangeFor('state')}
-              />
-          </div>
-            <div>
-            <InputLabel htmlFor="zip"></InputLabel>
-              <TextField
-                id="zip-input"
-                label = "Zip"
-                type="zip"
-                name="zip"
-                value={this.state.zip}
-                onChange={this.handleInputChangeFor('zip')}
-              />
-          </div>
-            <div>
-            <InputLabel htmlFor="total_bed_count"></InputLabel>
-              <TextField
-                id="total_bed_count-input"
-                label = "Total Bed Count"
-                type = "total_bed_count"
-                name = "total_bed_count"
-                value={this.state.total_bed_count}
-                onChange={this.handleInputChangeFor('total_bed_count')}
-              />
-          </div>
-          <div>
-            <input
-              className="register"
-              type="submit"
-              name="submit"
-              value="Register"
+          <h1 className="whitetext">Register</h1>
+            <DetoxCenterTextFields 
+              handleInputChangeFor = { this.handleInputChangeFor }
+              state = { this.state }
             />
+            <br/>
+          <div>
+            <Button
+              size="large"
+              style={style.root}
+              onClick={this.registerUser}
+            >
+            Register and Continue
+            </Button>
           </div>
-        </form>
-        <BackButton/>
+          </section>
       </div>
     );
   }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import InputLabel from '@material-ui/core/InputLabel';
-import { TextField } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
 import UserTextFields from './UserTextFields';
@@ -90,28 +88,6 @@ class RegisterPage extends Component {
           </h2>
         )}
           <h1 className="whitetext">Register</h1>
-          {/* <div>
-            <InputLabel htmlFor="username"></InputLabel>
-              <TextField
-                id="username-input"
-                label = "username"
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
-              />
-          </div>
-          <div>
-            <InputLabel htmlFor="password"></InputLabel>
-              <TextField
-                id="password-input"
-                label = "password"
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
-              />
-          </div> */}
              <UserTextFields 
               handleInputChangeFor = { this.handleInputChangeFor }
               state = { this.state }
