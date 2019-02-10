@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 // link to all detox center map and detox now button
 const MyLink = props => < Link to = "/alldetoxcentersmap" {
     ...props
@@ -73,8 +74,9 @@ export class LandingPage extends Component {
                 </div>
         </section>
         <section className="grayBackground">
-        <section >
-        
+        <section>
+        <section>
+          
             <center>
                 <div className="container">
                  <div  className="mission" >
@@ -86,14 +88,15 @@ export class LandingPage extends Component {
                  </div>
             </center>
         </section>
-        <section >
+        <section>
             <center>
             <div className="container">
                 <Button 
                     className="alignLeft"
                     size="large"
                     style={style.root}
-                    component={MyLink2}>
+                    component={MyLink2}
+                    >
                 Login
                 </Button>
                 <Button 
@@ -119,11 +122,15 @@ export class LandingPage extends Component {
                     size="large"
                     fullWidth={true}
                     style={style.root2}
-                    component={MyLink2}>
+                      component={MyLink2}
+                    >
                 Provider Login 
                 </Button>
                </div>
         </section>
+  
+        </section>
+      
         </section>
         </div>
   
