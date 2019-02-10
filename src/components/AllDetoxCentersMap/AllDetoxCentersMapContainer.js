@@ -82,9 +82,10 @@ render (){
                         size="small" 
                         variant="contained" 
                         color="primary"
-                        href = {
-                            'http://www.google.com/maps/place/' + marker.lat + ',' + marker.lng
-                        }
+                         href = {
+                             'https://www.google.com/maps/search/' + marker.detox_center_name + '/@' +
+                             marker.lat + '/' + marker.lng
+                         }
                         >
                     Open in Google Maps
                     </Button> 

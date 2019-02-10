@@ -46,7 +46,8 @@ export class DetoxNowButton extends Component {
           size="large" 
           style={style.root}
           href = {
-            'http://www.google.com/maps/place/' + this.props.reduxState.detoxLatLng.lat + ',' + this.props.reduxState.detoxLatLng.lng
+            'https://www.google.com/maps/search/' + this.props.reduxState.detoxLatLng.detox_center_name + '/@' +
+            this.props.reduxState.detoxLatLng.lat + '/' + this.props.reduxState.detoxLatLng.lng
           }
         >
           Get a Bed
