@@ -27,9 +27,10 @@ router.post('/register', (req, res, next) => {
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
   const clearance_level = req.body.clearance_level;
+  const number= Number(req.body.number);
   console.log(req.body)
-  const queryText = 'INSERT INTO person (username, password, clearance_level ) VALUES ($1, $2, $3) RETURNING id';
-  pool.query(queryText, [username, password, clearance_level])
+  const queryText = 'INSERT INTO person (username, password, clearance_level, number ) VALUES ($1, $2, $3, $4) RETURNING id';
+  pool.query(queryText, [username, password, clearance_level, number])
     .then((result) => { 
       if (clearance_level === 2){
       const detox_id = result.rows[0].id;

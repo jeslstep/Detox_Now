@@ -2,14 +2,29 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import InputLabel from '@material-ui/core/InputLabel';
 import { TextField } from '@material-ui/core';
-import BackButton from '../BackButton/BackButton';
+import { Button } from '@material-ui/core';
+import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
+import UserTextFields from './UserTextFields';
 
+
+// material ui style override 
+const style = {
+  root: {
+    color: '#ffffff',
+    backgroundColor: '#16233c',
+    margin: 8,
+    width: 300,
+  },
+};
 
 class RegisterPage extends Component {
+
+  // stores user input values
   state = {
     username: '',
     password: '',
-    clearance_level: 1
+    clearance_level: 1,
+    number: 0
   };
 
     componentDidUpdate(prevProps) {
@@ -22,13 +37,14 @@ class RegisterPage extends Component {
   registerUser = (event) => {
     event.preventDefault();
 
-    if (this.state.username && this.state.password) {
+    if (this.state.username && this.state.password&& this.state.number) {
       this.props.dispatch({
         type: 'REGISTER',
         payload: {
           username: this.state.username,
           password: this.state.password,
-          clearance_level: this.state.clearance_level
+          clearance_level: this.state.clearance_level,
+          number: this.state.number
         },
       });
     } else {
@@ -45,6 +61,26 @@ class RegisterPage extends Component {
   render() {
     return (
       <div>
+          <section className="App-header">
+          <center>
+              <div>
+                  {/* detox now logo accessed via firebase url */}
+                  <img 
+                      src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
+                      className="detoxlogo" 
+                      height="auto" 
+                      width="300" 
+                      alt="logo" />
+              </div>
+            </center>
+              <div>
+                {/* city skylinee outline image in current directory */}
+                <img 
+                  src={dtnow_skline_mobile} 
+                  alt="city outline"/>
+              </div>
+        </section>
+         <section className="grayBackground">
         {this.props.errors.registrationMessage && (
           <h2
             className="alert"
@@ -53,9 +89,8 @@ class RegisterPage extends Component {
             {this.props.errors.registrationMessage}
           </h2>
         )}
-        <form className="form" onSubmit={this.registerUser}>
-          <h1>Register as a User</h1>
-          <div>
+          <h1 className="whitetext">Register</h1>
+          {/* <div>
             <InputLabel htmlFor="username"></InputLabel>
               <TextField
                 id="username-input"
@@ -76,17 +111,22 @@ class RegisterPage extends Component {
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
               />
-          </div>
-          <div>
-            <input
-              className="register"
-              type="submit"
-              name="submit"
-              value="Register"
+          </div> */}
+             <UserTextFields 
+              handleInputChangeFor = { this.handleInputChangeFor }
+              state = { this.state }
             />
+            <br/>
+          <div>
+            <Button
+              size="large"
+              style={style.root}
+              onClick={this.registerUser}
+            >
+            Register and Continue
+            </Button>
           </div>
-        </form>
-        <BackButton/>
+          </section>
       </div>
     );
   }

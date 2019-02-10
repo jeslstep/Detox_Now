@@ -144,6 +144,7 @@ render() {
               state = { this.state }
             />
             <br/>
+            <div>
             <Button
               size="large"
               style={style.root}
@@ -153,6 +154,8 @@ render() {
              >
             Login
             </Button>
+            </div>
+            <div>
                <Button
               size="large"
               style={style.root2}
@@ -160,6 +163,7 @@ render() {
              >
             Register
             </Button>
+            </div>
       </section>
 
       </div>
