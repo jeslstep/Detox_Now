@@ -76,7 +76,6 @@ export class LandingPage extends Component {
         <section className="grayBackground">
         <section>
         <section>
-          
             <center>
                 <div className="container">
                  <div  className="mission" >

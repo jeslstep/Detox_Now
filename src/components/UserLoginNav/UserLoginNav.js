@@ -6,21 +6,18 @@ import './UserLoginNav.css';
 
 
 const UserLoginNav = (props) => (
-  <div className="nav">
+  <div>
    {props.user.id && (
-     <div>
-        <div>
-          <LogOutButton className="nav-right"/>
-          </div>
-      <div className="center">
         <>
-           <div className="center" >
-              Welcome, { props.user.username }!
-            {/* Your ID is: {props.user.id} */}
-          </div>
+      <section>
+        <div className="welcome">
+        <h1>Welcome, { props.user.username }!</h1> 
+        </div>
+        <div className="logout">
+          <LogOutButton  />
+        </div>
+        </section>
         </>
-    </div>
-    </div>
      )}
   </div>
 );

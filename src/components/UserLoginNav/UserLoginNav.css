@@ -1,16 +1,9 @@
-.nav {
-    overflow: hidden;
-    background-color: black;
-    max-height: auto;
+
+.welcome {
+    display: inline-block;
+    margin-right: 95px;
 }
 
-.center {
-    text-align: center;
-    color: white;
-    margin-bottom: 10px;
-    padding: 0px;
-}
-
-.nav-right {
-    float: right;
+.logout {
+    display: inline-block;
 }

@@ -5,6 +5,8 @@ import GOOGLE_MAPS_API_KEY from '../api_key';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
+import LogOutButton from '../LogOutButton/LogOutButton';
+import UserLoginNav from '../UserLoginNav/UserLoginNav';
 
 // material ui style override 
 const style = {
@@ -14,6 +16,12 @@ const style = {
     margin: 8,
     width: 300,
   },
+    root1: {
+        color: '#ffffff',
+        backgroundColor: '#ce0019',
+        margin: 8,
+        width: 300,
+    },
 };
 
 // link to all detox center map and detox now button
@@ -33,6 +41,16 @@ class AllDetoxCentersMap extends Component {
 render(props) {
 		return ( 
             <div>
+                <section>
+               {this.props.reduxState.user && (
+                        <>
+                       <div>
+                            <UserLoginNav/>
+                        </div>
+                      
+                        </>
+                    )}
+                </section>
                 <AllDetoxCentersMapContainer
                     className = "mapBorder" 
                     
@@ -69,11 +87,11 @@ render(props) {
                         alt="city outline"/>
                     </div>
                 </section>
-                <section className="grayBackground">
+                <section className="grayBackground2">
                 <center>
                 <Button
                 size="large" 
-                style={style.root}
+                style={style.root1}
                 href = {
                     'https://www.google.com/maps/search/' + this.props.reduxState.detoxLatLng.detox_center_name + '/@' +
                     this.props.reduxState.detoxLatLng.lat + '/' + this.props.reduxState.detoxLatLng.lng

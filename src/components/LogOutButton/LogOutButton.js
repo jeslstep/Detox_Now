@@ -2,23 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 
+const style = {
+    root: {
+        color: '#ffffff',
+        backgroundColor: '#16233c',
+        width: 100,
+        margin: 8, 
+    },
+};
+
 const LogOutButton = props => (
   <Button
-  size = "medium"
-  variant = "contained"
-  color = "primary"
-    // This button shows up in multiple locations and is styled differently
-    // because it's styled differently depending on where it is used, the className
-    // is passed to it from it's parents through React props
-    className={props.className}
+    size="small"
+    style={style.root}
     onClick={() => props.dispatch({ type: 'LOGOUT' })}
   >
     Log Out
   </Button>
 );
 
-// This component doesn't need 'mapStateToProps'
-// because it doesn't care what the current state is.
-// No matter what the redux state is, this button will always be a log out button
-// this component still needs 'connect' though, because it is going to dispatch a redux action
-export default connect()(LogOutButton);
+
+const mapReduxStateToProps = (reduxState) => ({
+  reduxState
+});
+
+export default connect(mapReduxStateToProps)(LogOutButton);

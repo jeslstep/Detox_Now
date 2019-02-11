@@ -1,12 +1,19 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto',
+    sans-serif;
     margin: 0px;
     background-color: white;
     text-align: center;
 }
 .whitetext {
     color: white;
+}
+/* all detox center map page */
+.App-header2 {
+    color: black;
+    margin-top: -50px;
+    margin-bottom: 65px;
 }
 /* LandingPage */
 .App-header {
@@ -21,6 +28,14 @@ body {
     display: inline-block;
     width: 100%;
     padding-bottom: 50px;
+}
+
+.grayBackground2 {
+    background-color: #444f63;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 5px;
+     font-size: 15px;
 }
 
 .input {
@@ -64,10 +79,12 @@ p {
 /* login and register buttons */
 .alignLeft {
     float:left;
+  
 }
 
 .alignRight {
     float: right;
+    
 }
 
 

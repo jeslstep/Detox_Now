@@ -17,8 +17,8 @@ export class UserLogin extends Component {
  
   render() {
     return (
-      <div className="background">
-        <UserLoginNav />
+      <div>
+        {/* <UserLoginNav /> */}
         <AllDetoxCentersMap />
       </div>
     );
