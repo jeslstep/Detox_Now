@@ -12,6 +12,7 @@ import Card from '@material-ui/core/Card';
 import Geocode from "react-geocode";
 // google api key needed
 import GOOGLE_MAPS_API_KEY from '../api_key';
+import UserLoginNav from '../UserLoginNav/UserLoginNav';
 Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
 
 
@@ -114,6 +115,7 @@ class SMSForm extends Component {
   render() {
     return (
       <div>
+        <UserLoginNav/>
         <div align = "center">
           <Card className="card4">
               <form onSubmit={this.onSubmit} className={this.state.error ? 'error sms-form' : 'sms-form'}>
