@@ -33,11 +33,7 @@ const styles = theme => ({
 
 });
 
-const textArea = {
-  textAlign: 'center',
-};
-
-class LoginTextFields extends React.Component {
+class SMSFormTextFields extends React.Component {
 
 
   render() {
@@ -45,45 +41,18 @@ class LoginTextFields extends React.Component {
 
     return (
       <div>
-          <div>
-        <InputLabel htmlFor="username"></InputLabel>
-        <TextField
-        id="standard-name"
-        style={textArea}
-        label="Username"
-        variant="outlined"
-        className={classes.textField}
-          value = {
-            this.props.username
-          }
-        InputLabelProps = {{
-            classes: {
-                root: classes.cssLabel,
-                focused: classes.cssFocused,
-                },
-               }
-           }
-        InputProps = {{
-                classes: {
-              root: classes.cssOutlinedInput,
-              focused: classes.cssFocused,
-              notchedOutline: classes.notchedOutline,
-        }}}
-          onChange={this.props.handleInputChangeFor('username')}
-          margin="normal"
-        />
-    </div>
     <div>
-        <InputLabel htmlFor="password"></InputLabel>
+        <InputLabel htmlFor="to"></InputLabel>
         <TextField
-        id="standard-password-input"
-        label="Password"
+        type="tel" 
+        name="to" 
+        id="to"
+        label= "To"
+        value={this.props.to}
+        onChange={this.props.onHandleChange}
         className={classes.textField}
         type="password"
         variant="outlined"
-        value = {
-          this.props.password
-        }
         InputLabelProps = {{
                    classes: {
                        root: classes.cssLabel,
@@ -99,17 +68,43 @@ class LoginTextFields extends React.Component {
            
                           
         }}}
-          onChange = { this.props.handleInputChangeFor('password') }
           margin="normal"
         />
         </div>
-      </div>
+      <div>
+
+        <InputLabel htmlFor="body"></InputLabel>
+        <TextField
+            disabled
+            id = "outlined-multiline-static"
+            multiline rows = "9"
+            value = {this.props.body}
+            name="body" 
+            onChange={this.props.onHandleChange}
+            variant="outlined"
+        InputLabelProps = {{
+            classes: {
+                root: classes.cssLabel,
+                focused: classes.cssFocused,
+                },
+               }
+           }
+        InputProps = {{
+            classes: {
+              root: classes.cssOutlinedInput,
+              focused: classes.cssFocused,
+              notchedOutline: classes.notchedOutline,
+        }}}
+          margin="normal"
+        />
+        </div>
+    </div>
     );
   }
 }
 
-LoginTextFields.propTypes = {
+SMSFormTextFields.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(LoginTextFields);
+export default withStyles(styles)(SMSFormTextFields);

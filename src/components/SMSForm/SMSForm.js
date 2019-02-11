@@ -3,17 +3,27 @@ import { connect } from 'react-redux';
 import './SMSForm.css';
 
 // material ui
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
-import Card from '@material-ui/core/Card';
+import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
 
 // google maps api
 import Geocode from "react-geocode";
 // google api key needed
 import GOOGLE_MAPS_API_KEY from '../api_key';
 import UserLoginNav from '../UserLoginNav/UserLoginNav';
+import SMSFormTextFields from './SMSFormTextFields';
 Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
+
+
+// material ui style override 
+const style = {
+    root: {
+      color: '#ffffff',
+      backgroundColor: '#16233c',
+      margin: 8,
+      width: 300,
+    },
+  };
 
 
 
@@ -116,37 +126,24 @@ class SMSForm extends Component {
     return (
       <div>
         <UserLoginNav/>
-        <div align = "center">
-          <Card className="card4">
-              <form onSubmit={this.onSubmit} className={this.state.error ? 'error sms-form' : 'sms-form'}>
-                <div className="sms-form div">
-                  <InputLabel className = "sms-form label" htmlFor="to">To:</InputLabel>
-                  < TextField
-                    className="sms-form label"
-                    type="tel" 
-                    name="to" 
-                    id="to"
-                    value={this.state.message.to}
-                    onChange={this.onHandleChange}
-                  />
-                </div>
-                <div>
-                  <InputLabel htmlFor="body">Body:</InputLabel>
-                  <TextField
-                    disabled
-                    id = "outlined-multiline-static"
-                    multiline rows = "9"
-                    value = {this.state.message.body}
-                    name="body" 
-                    onChange={this.onHandleChange}
-                    />
-                </div>
-                <Button variant="raised" color="primary" className = "sms-form button" type="submit" disabled={this.state.submitting}>
+        <section className="grayBackground">
+         <h1 className="whitetext">Message for Help</h1>
+            <SMSFormTextFields 
+              onHandleChange = { this.onHandleChange }
+              to = { this.state.message.to }
+              body = { this.state.message.body }
+            />
+            <br/>
+            <div>
+                <Button 
+                size="large"
+                style={style.root}
+                disabled={this.state.submitting}
+                onClick={this.onSubmit} >
                   Send Message
                 </Button>
-            </form>
-          </Card>
-        </div>
+            </div>
+       </section>
       </div>
     );
   }  

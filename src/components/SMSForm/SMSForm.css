@@ -1,16 +1,20 @@
 .sms-form {
     text-align: center;
     margin-bottom: 25px;
+    
 }
 
 .sms-form label {
     display: block;
+ 
 }
 
 .sms-form input {
     font-size: 1em;
     width: 60%;
     box-sizing: border-box;
+    color: white;
+    
 }
 
 .sms-form div {
@@ -41,6 +45,6 @@
     width: 50%;
     text-align: center;
     background-color: floralwhite;
-    color: black;
+   color: white;
 }
 
