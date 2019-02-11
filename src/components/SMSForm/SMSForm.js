@@ -126,6 +126,14 @@ class SMSForm extends Component {
     return (
       <div>
         <UserLoginNav/>
+              <section className="App-header">
+              <div>
+                {/* city skylinee outline image in current directory */}
+                <img 
+                  src={dtnow_skline_mobile} 
+                  alt="city outline"/>
+              </div>
+        </section>
         <section className="grayBackground">
          <h1 className="whitetext">Message for Help</h1>
             <SMSFormTextFields 

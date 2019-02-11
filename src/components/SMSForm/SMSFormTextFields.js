@@ -9,26 +9,26 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
         width: 200,
-     
+        textColor: 'white',
     },
     cssLabel: {
-        color: 'white',
-        textAlign: 'center',
+         textColor: 'white',
       
     },
     cssOutlinedInput: {
     '&$cssFocused $notchedOutline': {
       borderColor: `${theme.palette.primary.main} !important`,
+      
     }
   },
 
   cssFocused: {
-   
+  
   },
   notchedOutline: {
 
     borderWidth: '1px',
-    borderColor: 'white !important'
+    borderColor: 'white !important',
   },
 
 });
