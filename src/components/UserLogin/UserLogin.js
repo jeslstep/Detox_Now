@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import UserLoginNav from '../UserLoginNav/UserLoginNav';
-import SMSForm from '../SMSForm/SMSForm';
 import AllDetoxCentersMap from '../AllDetoxCentersMap/AllDetoxCentersMap';
 
 

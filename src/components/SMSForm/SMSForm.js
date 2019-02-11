@@ -40,7 +40,7 @@ class SMSForm extends Component {
       this.state = {
           message: {
             to: '',
-            body:  'Your current location will appear here'
+            body: 'A message containing your username, phone number and current location will appear here.'
           },
           submitting: false,
           error: false
@@ -64,8 +64,11 @@ class SMSForm extends Component {
                                     // sets message body into set
                                     this.setState({
                                          message: {
-                                             body: `From: ${this.props.user.username}, ${this.props.user.number}
-                                             I need help getting to a detox center, can you come get me here: ${address}`
+                                             body: `From: ${this.props.user.username},
+                                           
+                                             Phone Number: ${this.props.user.number},
+
+                                             Message: I need help getting to a detox center, can you come get me here: ${address}`
                                          }
                                      });
                               },
@@ -107,10 +110,10 @@ class SMSForm extends Component {
           this.setState({
             error: false,
             submitting: false,
-            message: {
-              to: '',
-              body: ''
-            }
+             message: {
+               ...this.state.message,
+               to: ''
+             }
           });
           alert("Message Sent");
         } else {
@@ -136,20 +139,30 @@ class SMSForm extends Component {
         </section>
         <section className="grayBackground">
          <h1 className="whitetext">Message for Help</h1>
+            <section>
+                <center>
+                    <div className="container3">
+                    <div  className="mission" >
+                    <h3>
+                      {this.state.message.body}
+                    </h3>
+                    </div>
+                    </div>
+                </center>
+            </section>
             <SMSFormTextFields 
               onHandleChange = { this.onHandleChange }
               to = { this.state.message.to }
-              body = { this.state.message.body }
             />
             <br/>
             <div>
-                <Button 
-                size="large"
-                style={style.root}
-                disabled={this.state.submitting}
-                onClick={this.onSubmit} >
-                  Send Message
-                </Button>
+              <Button 
+                  size="large"
+                  style={style.root}
+                  disabled={this.state.submitting}
+                  onClick={this.onSubmit} >
+              Send Message
+              </Button>
             </div>
        </section>
       </div>

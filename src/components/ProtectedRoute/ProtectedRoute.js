@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterUserPage from '../Registration/RegisterUserPage';
 import RegisterDetoxPage from '../Registration/RegisterDetoxPage';
-import AllDetoxCentersMap from '../AllDetoxCentersMap/AllDetoxCentersMap';
 import { LandingPage } from '../LandingPage/LandingPage';
 
 // A Custom Wrapper Component -- This will keep our code DRY.

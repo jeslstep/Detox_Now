@@ -38,13 +38,11 @@
      margin-bottom: 25px;
 }
 
-.card4 {
-    margin: 25px;
-    margin-bottom: 25px;
+.container3 {
     height: auto;
-    width: 50%;
-    text-align: center;
-    background-color: floralwhite;
-   color: white;
+    width: 315px;
 }
 
+h3 {
+    color:white;
+}

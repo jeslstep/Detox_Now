@@ -5,7 +5,6 @@ import GOOGLE_MAPS_API_KEY from '../api_key';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
-import LogOutButton from '../LogOutButton/LogOutButton';
 import UserLoginNav from '../UserLoginNav/UserLoginNav';
 
 // material ui style override 

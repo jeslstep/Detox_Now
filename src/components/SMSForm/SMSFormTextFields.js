@@ -10,15 +10,15 @@ const styles = theme => ({
         marginRight: theme.spacing.unit,
         width: 200,
         textColor: 'white',
+       
     },
     cssLabel: {
-         textColor: 'white',
-      
+         color: 'white',
+     
     },
     cssOutlinedInput: {
     '&$cssFocused $notchedOutline': {
       borderColor: `${theme.palette.primary.main} !important`,
-      
     }
   },
 
@@ -44,14 +44,10 @@ class SMSFormTextFields extends React.Component {
     <div>
         <InputLabel htmlFor="to"></InputLabel>
         <TextField
-        type="tel" 
-        name="to" 
-        id="to"
-        label= "To"
+        label = "To"
         value={this.props.to}
         onChange={this.props.onHandleChange}
         className={classes.textField}
-        type="password"
         variant="outlined"
         InputLabelProps = {{
                    classes: {
@@ -67,33 +63,6 @@ class SMSFormTextFields extends React.Component {
               notchedOutline: classes.notchedOutline,
            
                           
-        }}}
-          margin="normal"
-        />
-        </div>
-      <div>
-
-        <InputLabel htmlFor="body"></InputLabel>
-        <TextField
-            disabled
-            id = "outlined-multiline-static"
-            multiline rows = "9"
-            value = {this.props.body}
-            name="body" 
-            onChange={this.props.onHandleChange}
-            variant="outlined"
-        InputLabelProps = {{
-            classes: {
-                root: classes.cssLabel,
-                focused: classes.cssFocused,
-                },
-               }
-           }
-        InputProps = {{
-            classes: {
-              root: classes.cssOutlinedInput,
-              focused: classes.cssFocused,
-              notchedOutline: classes.notchedOutline,
         }}}
           margin="normal"
         />
