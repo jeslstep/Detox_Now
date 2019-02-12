@@ -41,7 +41,7 @@ render(props) {
 		return ( 
             <div>
                 <section>
-               {this.props.reduxState.user && (
+               {this.props.reduxState.user.id && (
                         <>
                        <div>
                             <ButtonAppBar/>
