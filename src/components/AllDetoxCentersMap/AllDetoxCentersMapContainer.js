@@ -9,7 +9,15 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "reac
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 
-
+// material ui style override 
+const style = {
+    root1: {
+        color: '#ffffff',
+        backgroundColor: '#ce0019',
+        margin: 8,
+        width: 100,
+    },
+};
 
 
 class AllDetoxCentersMapContainer extends Component {
@@ -80,14 +88,15 @@ render (){
                     <div>
                     <Button 
                         size="small" 
-                        variant="contained" 
-                        color="primary"
+                         style = {
+                             style.root1
+                         }
                          href = {
                              'https://www.google.com/maps/search/' + marker.detox_center_name + '/@' +
                              marker.lat + '/' + marker.lng
                          }
                         >
-                    Open in Google Maps
+                    Get a Bed
                     </Button> 
                     </div>
                     </center>
