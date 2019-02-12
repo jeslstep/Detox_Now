@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import UserLoginNav from '../UserLoginNav/UserLoginNav';
+import ButtonAppBar from '../UserLoginNav/ButtonAppBar';
 
 
 const style = {
@@ -36,20 +37,9 @@ export class DetoxCenterLogin extends Component {
 
   render() {
     return (
-      <div align="center">
-        <UserLoginNav/>
+      <div>
+        <ButtonAppBar/>
                <section className="App-header">
-            <center>
-                <div>
-                    {/* detox now logo accessed via firebase url */}
-                    <img 
-                        src="https://firebasestorage.googleapis.com/v0/b/detox-now.appspot.com/o/dtnow-red.png?alt=media&token=5c6c5842-1e82-478d-98ae-4b156d42442b" 
-                        className="detoxlogo" 
-                        height="auto" 
-                        width="300" 
-                        alt="logo" />
-                </div>
-                </center>
                 <div>
                     {/* city skylinee outline image in current directory */}
                     <img 
@@ -58,6 +48,7 @@ export class DetoxCenterLogin extends Component {
                 </div>
         </section>
         <section className="grayBackground">
+        <center>
          <Card id="card">
            {this.props.reduxState.detoxInfo.map(info => (
              <div key={info.detox_id}>
@@ -104,6 +95,7 @@ export class DetoxCenterLogin extends Component {
                 </CardActions>
                    </div>
              </Card>
+             </center>
              </section>
       </div>
     );

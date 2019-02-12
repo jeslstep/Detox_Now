@@ -40,7 +40,9 @@
 
 .container3 {
     height: auto;
-    width: 315px;
+    width: 215px;
+    padding: 5px;
+    outline: 1px solid white;
 }
 
 h3 {

@@ -20,6 +20,10 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+    menuButton2: {
+      marginRight: -12,
+      marginLeft: 20,
+    },
 };
 
 const style = {
@@ -54,17 +58,18 @@ function UserLoginNav(props) {
         <>
         <AppBar position="static">
         <Toolbar>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
+            <Typography variant="h6" color="inherit" className={classes.menuButton}>
                 Welcome, { props.user.username }! 
             </Typography>
-            <Button
+              <Button
               size="small"
-              style={style.root}
+              // style={style.root}
               onClick={() => props.dispatch({ type: 'LOGOUT' })}
             >
               Log Out
             </Button>
          </Toolbar>
+      
          </AppBar>
         </>
      )}

@@ -10,8 +10,8 @@ import dtnow_skline_mobile from '../LandingPage/dtnow_skline_mobile.svg';
 import Geocode from "react-geocode";
 // google api key needed
 import GOOGLE_MAPS_API_KEY from '../api_key';
-import UserLoginNav from '../UserLoginNav/UserLoginNav';
 import SMSFormTextFields from './SMSFormTextFields';
+import ButtonAppBar from '../UserLoginNav/ButtonAppBar';
 Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
 
 
@@ -128,7 +128,7 @@ class SMSForm extends Component {
   render() {
     return (
       <div>
-        <UserLoginNav/>
+        <ButtonAppBar/>
               <section className="App-header">
               <div>
                 {/* city skylinee outline image in current directory */}
@@ -139,6 +139,11 @@ class SMSForm extends Component {
         </section>
         <section className="grayBackground">
          <h1 className="whitetext">Message for Help</h1>
+            <SMSFormTextFields 
+              onHandleChange = { this.onHandleChange }
+              to = { this.state.message.to }
+            />
+            <br/>
             <section>
                 <center>
                     <div className="container3">
@@ -150,10 +155,6 @@ class SMSForm extends Component {
                     </div>
                 </center>
             </section>
-            <SMSFormTextFields 
-              onHandleChange = { this.onHandleChange }
-              to = { this.state.message.to }
-            />
             <br/>
             <div>
               <Button 
