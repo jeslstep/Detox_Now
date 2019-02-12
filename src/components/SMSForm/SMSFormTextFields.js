@@ -45,6 +45,9 @@ class SMSFormTextFields extends React.Component {
         <InputLabel htmlFor="to"></InputLabel>
         <TextField
         label = "To"
+         type = "tel"
+         name = "to"
+         id = "to"
         value={this.props.to}
         onChange={this.props.onHandleChange}
         className={classes.textField}

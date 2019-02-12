@@ -95,7 +95,7 @@ class SMSForm extends Component {
   
   // when the send message button is clicked, send information to server to make twilio api request
   onSubmit(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({ submitting: true });
         fetch('/api/messages', {
             method: 'POST',
@@ -110,7 +110,7 @@ class SMSForm extends Component {
           this.setState({
             error: false,
             submitting: false,
-             message: {
+                message: {
                ...this.state.message,
                to: ''
              }
