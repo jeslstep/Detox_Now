@@ -9,25 +9,29 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
         width: 200,
-     
+
     },
     cssLabel: {
         color: 'white',
         textAlign: 'center',
-      
+
     },
     cssOutlinedInput: {
         '&$cssFocused $notchedOutline': {
-        borderColor: `${theme.palette.primary.main} !important`,
+            borderColor: `white !important`,
+
         }
     },
+
     cssFocused: {
-    
+        color: 'white !important'
     },
+
     notchedOutline: {
         borderWidth: '1px',
         borderColor: 'white !important'
     },
+
 });
 
 class DetoxCenterTextFields extends React.Component {

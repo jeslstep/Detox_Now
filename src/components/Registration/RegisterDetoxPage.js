@@ -31,6 +31,13 @@ class RegisterPage extends Component {
     total_bed_count: 0
   };
 
+    componentDidUpdate(prevProps) {
+      // Typical usage (don't forget to compare props):
+      if (this.props.user !== prevProps.user) {
+        this.props.history.push('/home');
+      }
+    }
+
   // resgisters a detox center
   registerUser = (event) => {
     event.preventDefault();

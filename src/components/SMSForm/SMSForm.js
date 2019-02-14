@@ -148,7 +148,7 @@ class SMSForm extends Component {
                 <center>
                     <div className="container3">
                     <div  className="mission" >
-                    <h3>
+                    <h3 className="whitetext">
                       {this.state.message.body}
                     </h3>
                     </div>
@@ -158,6 +158,7 @@ class SMSForm extends Component {
             <br/>
             <div>
               <Button 
+                
                   size="large"
                   style={style.root}
                   disabled={this.state.submitting}

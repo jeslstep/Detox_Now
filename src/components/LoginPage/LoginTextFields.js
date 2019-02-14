@@ -18,27 +18,23 @@ const styles = theme => ({
     },
     cssOutlinedInput: {
     '&$cssFocused $notchedOutline': {
-      borderColor: `${theme.palette.primary.main} !important`,
-    }
-  },
+      borderColor: `white !important`,
+      
+      }
+    },
 
-  cssFocused: {
-   
-  },
-  notchedOutline: {
-
-    borderWidth: '1px',
-    borderColor: 'white !important'
-  },
+    cssFocused: {
+    color: 'white !important'
+    },
+    
+    notchedOutline: {
+      borderWidth: '1px',
+      borderColor: 'white !important'
+    },
 
 });
 
-const textArea = {
-  textAlign: 'center',
-};
-
 class LoginTextFields extends React.Component {
-
 
   render() {
     const { classes } = this.props;
@@ -49,7 +45,6 @@ class LoginTextFields extends React.Component {
         <InputLabel htmlFor="username"></InputLabel>
         <TextField
         id="standard-name"
-        style={textArea}
         label="Username"
         variant="outlined"
         className={classes.textField}

@@ -5,30 +5,31 @@ import TextField from '@material-ui/core/TextField';
 import InputLabel from '@material-ui/core/InputLabel';
 
 const styles = theme => ({
-    textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200,
-        textColor: 'white',
-       
-    },
-    cssLabel: {
-         color: 'white',
-     
-    },
-    cssOutlinedInput: {
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+
+  },
+  cssLabel: {
+    color: 'white',
+    textAlign: 'center',
+
+  },
+  cssOutlinedInput: {
     '&$cssFocused $notchedOutline': {
-      borderColor: `${theme.palette.primary.main} !important`,
+      borderColor: `white !important`,
+
     }
   },
 
   cssFocused: {
-  
+    color: 'white !important'
   },
-  notchedOutline: {
 
+  notchedOutline: {
     borderWidth: '1px',
-    borderColor: 'white !important',
+    borderColor: 'white !important'
   },
 
 });
