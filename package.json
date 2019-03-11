@@ -40,7 +40,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "testserver": "jest server/test/*.test.js --forceExit"
+    "testserver": "jest server/test/*.test.js --forceExit",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "devDependencies": {
     "jest": "^23.6.0",
@@ -52,5 +53,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "heroku-run-build-script": true
 }
