@@ -37,7 +37,7 @@ const http = require("http");
 
 setInterval(function () {
   http.get("https://blooming-earth-36039.herokuapp.com/#/home");
-}, 3000000); // every 50 minutes (3000000)
+}, 900000); // every 15 minutes (900000)
 
 // App Set //
 const PORT = process.env.PORT || 5000;
