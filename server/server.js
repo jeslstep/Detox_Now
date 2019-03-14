@@ -33,11 +33,11 @@ app.use('/api/messages', twilioRouter);
 app.use(express.static('build'));
 
 /** ---------- keep app awake on heroku ---------- **/
-const http = require("http");
 
 setInterval(function () {
-  http.get("https://blooming-earth-36039.herokuapp.com/#/home");
-}, 900000); // every 15 minutes (900000)
+  app.get("https://blooming-earth-36039.herokuapp.com/#/home");
+  console.log("waking app")
+}, 12000); // every 15 minutes (12000)
 
 // App Set //
 const PORT = process.env.PORT || 5000;
