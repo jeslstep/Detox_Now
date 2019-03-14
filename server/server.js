@@ -37,7 +37,7 @@ app.use(express.static('build'));
 setInterval(function () {
   app.get("https://blooming-earth-36039.herokuapp.com/#/home");
   console.log("waking app")
-}, 12000); // every 15 minutes (12000)
+}, 900000); // every 15 minutes (900000)
 
 // App Set //
 const PORT = process.env.PORT || 5000;
