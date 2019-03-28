@@ -79,7 +79,7 @@ render(props) {
                     <div >
                         {/* city skylinee outline image in current directory */}
                         <img 
-                         id="mapSkylineContainer"
+                       
                         src={dtnow_skline_mobile} 
                         alt="city outline"
                        
