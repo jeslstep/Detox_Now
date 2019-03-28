@@ -54,7 +54,19 @@ input {
     font-size: 15px;
 }
 
+
 /* End */
+
+
+#mapSkylineContainer {
+ 
+    
+} 
+
+
+
+
+
 
 section {
     display: block;
@@ -109,11 +121,23 @@ p {
 /*  End LandingPage */
 
 footer {
-      position: absolute;
+      position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
+      height: 310px;
 }
+
+#Padding {
+     position: fixed;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     height: 20px;
+}
+
+
+
 
 .alert {
     background-color: #ff4545;

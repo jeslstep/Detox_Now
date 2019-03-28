@@ -43,15 +43,12 @@ render(props) {
                 <section>
                {this.props.reduxState.user.id && (
                         <>
-                       <div>
-                            <ButtonAppBar/>
-                        </div>
-                      
+                        <ButtonAppBar/>
                         </>
                     )}
                 </section>
                 <AllDetoxCentersMapContainer
-                    className = "mapBorder" 
+                    
                     
                     // google api key needed 
                     googleMapURL = {
@@ -61,7 +58,7 @@ render(props) {
                     containerElement={<div id="map"
                         style = {
                             {
-                                position: `absolute`, height: `100%`,
+                                position: `absolute`, height: `90%`,
                                 width: `100%`
                             }
 
@@ -79,15 +76,18 @@ render(props) {
 			/>
             <footer>
                 <section className="App-header">
-                    <div>
+                    <div >
                         {/* city skylinee outline image in current directory */}
                         <img 
+                         id="mapSkylineContainer"
                         src={dtnow_skline_mobile} 
-                        alt="city outline"/>
+                        alt="city outline"
+                       
+                        />
                     </div>
                 </section>
                 <section className="grayBackground2">
-                <center>
+               <div>
                 <Button
                 size="large" 
                 style={style.root1}
@@ -98,10 +98,11 @@ render(props) {
                 >
                 Get a Bed
                 </Button>
+                </div>
                 {/* Show the button to smsform if the user is logged in */}
                 {this.props.reduxState.user.id && (
                     <>
-                    <div>
+                   
                     <Button 
                     size="large" 
                     style={style.root}
@@ -109,12 +110,13 @@ render(props) {
                     >
                     Message for Help
                     </Button>
-                    </div>
+                
                     </>
                 )}
-                </center>
+               
                 </section>
             </footer>
+            <div id="Padding"></div>
          </div>
     );
   }
