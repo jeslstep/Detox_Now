@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b85937e75daaf6c07886",
-    "url": "/static/css/main.7b57b48b.chunk.css"
+    "revision": "7e04cb97171feea5c349",
+    "url": "/static/css/main.a70a91f4.chunk.css"
   },
   {
-    "revision": "b85937e75daaf6c07886",
+    "revision": "7e04cb97171feea5c349",
     "url": "/static/js/main.a19102f7.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/static/media/dtnow_skline_mobile.d0543a34.svg"
   },
   {
-    "revision": "28495549f30ff05db7f1be059641a5b1",
+    "revision": "21e05573fffa04acc73662e12476c8dc",
     "url": "/index.html"
   }
 ];
