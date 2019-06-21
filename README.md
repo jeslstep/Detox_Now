@@ -11,7 +11,7 @@ Provides immediate directions to the detox center with the most availability, in
 Allows anyone who registers to send their current location to a contact for help getting to a detox center
 
 # Website
-https://gentle-stream-66463.herokuapp.com/#/home
+https://blooming-earth-36039.herokuapp.com/#/home
 
 # Built with:
 1. React.js
