@@ -8,7 +8,7 @@ All registered detox centers are displayed on a map with their corresponding bed
 
 Provides immediate directions to the detox center with the most availability, informed by the bed counts of each registered detox center.
 
-Allows anyone who registers to send their current location to a contact for help getting to a detox center
+Allows anyone who registers to send their current location to a contact for help getting to a detox center ** this functionality will only work if a valid api key exixts in env
 
 # Website
 https://blooming-earth-36039.herokuapp.com/#/home
