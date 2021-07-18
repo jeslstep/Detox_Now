@@ -24,8 +24,8 @@ https://www.npmjs.com/
 5. Material UI
 https://material-ui.com/getting-started/installation/
 6. Passport
-7. Google Maps API -- reat-google-maps, react-geocode
-8. Twilio API
+7. Google Maps API -- react-geocode
+8. Twilio API -- currently disabled, as I have used up my free trial, will work with a vaild api key
 https://www.twilio.com/try-twilio
 9. PostgreSQL
 (https://www.postgresql.org/)
