@@ -11,6 +11,9 @@ Provides immediate directions to the detox center with the most availability, in
 Allows anyone who registers to send their current location to a contact for help getting to a detox center ** this functionality will only work if a valid api key exixts in env
 
 # Website
+
+this link can take up to 30 seconds to load since I am using a free dyno on heroku for hosting:
+
 https://blooming-earth-36039.herokuapp.com/#/home
 
 # Built with:
